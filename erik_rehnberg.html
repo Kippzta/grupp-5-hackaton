@@ -4,27 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
     <title>Erik</title>
 </head>
 
 <body>
     <div id="header"></div>
-    <main>
+    <main class="main_container">
         <h1>Erik Rehnberg</h1>
         <figure>
             <img src="src/erik.jpg" alt="A picture of Erik Rehnberg." style="max-height: 300px;">
         </figure>
-        <section>
-            <article>
+        <section class="info">
+            <article id="address">
                 <h3>Address</h3>
                 <p> Fanjunkaregatan 1, Linköping</p>
             </article>
-            <ul>
-                <li>Dricka mjölk</li>
-                <li>Bänkpress</li>
-                <li>Lyfta andra</li>
-                <li>Att bli bättre</li>
-            </ul>
+            <section class="skills">
+                <h2>Fyra saker som jag är bra på:</h2>
+
+                <ul>
+                    <li>Dricka mjölk</li>
+                    <li>Bänkpress</li>
+                    <li>Lyfta andra</li>
+                    <li>Att bli bättre</li>
+                </ul>
+            </section>
         </section>
     </main>
     <footer>
@@ -36,7 +41,7 @@
             .then(data => {
                 document.getElementById("header").innerHTML = data;
             });
-    </script>   
+    </script>
 </body>
 
 </html>
