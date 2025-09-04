@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <div id="header"></div>
     <main>
         <figure>
             <img src="src/gruppbild.jpg" alt="Grupp bild på grupp5">
@@ -38,6 +39,13 @@ Vi upplevde att det var tydligt vem som gjorde vad, och att kommunikationen flö
         <a href="https://github.com/Kippzta">Erik</a>
         <a href="https://github.com/omarogaili">Omar</a>
     </footer>
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>

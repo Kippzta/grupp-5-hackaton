@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <div id="header"></div>
     <main>
         <h1>Erik Rehnberg</h1>
         <figure>
@@ -29,6 +30,13 @@
     <footer>
         <a href="https://github.com/Kippzta">Kippzta GitHub</a>
     </footer>
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>   
 </body>
 
 </html>

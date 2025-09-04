@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <div id="header"></div>
     <main>
         <h1>Jonatan Andersson</h1>
         <figure>
@@ -29,7 +30,13 @@
         </section>
     </main>
     <footer><a href="https://github.com/Temmuks">Jonatan Github</a></footer>
-
+     <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>
