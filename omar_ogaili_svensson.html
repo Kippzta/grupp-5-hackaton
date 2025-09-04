@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <div id="header"></div>
     <main>
         <h2>Omar Ogaili Svensson</h2>
         <figure>
@@ -31,5 +32,12 @@
     <footer>
         <i class="fa fa-github"><a href="https://github.com/omarogaili" rel="noopener" target="_blank">GitHub</a></i>
     </footer>
+        <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+            });
+    </script>
 </body>
 </html>
